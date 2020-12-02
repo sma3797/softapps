@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import MainHeader from "./MainHeader";
 import classes from "./MainNavigation.module.css";
@@ -8,6 +8,13 @@ import Email from "../../../shared/assets/Images/Email.png";
 import Call from "../../../shared/assets/Images/Call.png";
 
 const MainNavigation = (props) => {
+    const home = useRef();
+    const services = useRef();
+    const portfolio = useRef();
+    const about = useRef();
+    const careers = useRef();
+    const contact = useRef();
+
     return (
         <MainHeader>
             <div className={classes.MainNavigation}>
@@ -19,14 +26,24 @@ const MainNavigation = (props) => {
                     </div>
                 </div>
                 <div className={classes.NavLinks}>
-                    <NavLink activeClassName={classes.active} exact to={`/`}>
+                    <a onClick={() => home.current.click()} ref={home} href={`#home`}>
                         Home
-                    </NavLink>
-                    <NavLink to={`/services`}>Services</NavLink>
-                    <NavLink to={`/portfolio`}>Portfolio</NavLink>
-                    <NavLink to={`/about`}>About Us</NavLink>
-                    <NavLink to={`/career`}>Career</NavLink>
-                    <NavLink to={`/contact`}>Contact Us</NavLink>
+                    </a>
+                    <a onClick={() => services.current.click()} ref={services} href={`#services`}>
+                        Services
+                    </a>
+                    <a onClick={() => about.current.click()} ref={about} href={`#about`}>
+                        About
+                    </a>
+                    <a onClick={() => portfolio.current.click()} ref={portfolio} href={`#portfolio`}>
+                        Portfolio
+                    </a>
+                    <a onClick={() => careers.current.click()} ref={careers} href={`#careers`}>
+                        Careers
+                    </a>
+                    <a onClick={() => contact.current.click()} ref={contact} href={`#contact`}>
+                        Contact Us
+                    </a>
                 </div>
                 <div className={classes.RightNavLinks}>
                     <NavLink to={`/e`}>

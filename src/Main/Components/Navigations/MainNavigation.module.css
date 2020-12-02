@@ -1,15 +1,15 @@
 @import "../../../shared/assets/CSS/colors.css";
 
 .MainNavigation {
-	width: 95%;
-	height: 100%;
-	/* max-width: 1320px; */
+	width: 85%;
+    height: 100%;
+	/* max-width: 1420px; */
 	/* height: 100%; */
 	display: flex;
 	justify-content: space-between;
 	margin: auto;
 	align-items: center;
-	padding: 1rem 0rem;
+    padding: 1rem 2rem;
 }
 .Logo{
     width: 20%;
@@ -44,7 +44,7 @@
 .RightNavLinks a img{
     width: 100%;
     max-width: 20px;
-    padding-left: 12px;
+    margin-left: 12px;
 }
 
 @media (max-width:786px){

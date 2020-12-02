@@ -5,7 +5,7 @@ import MainNavigation from "../Components/Navigations/MainNavigation";
 
 import classes from "./Layout.module.css";
 
-const Home = React.lazy(() => import("./../Components/Pages/Home"));
+const MainPage = React.lazy(() => import("../Components/Pages/0MainPage"));
 
 // import { Helmet } from "react-helmet";
 // <Helmet>
@@ -18,7 +18,7 @@ const Layout = (props) => {
     routes = (
         <Switch>
             {/* <Route path="/" exact render={() => <Redirect to={`/${branch}`} />} /> */}
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={MainPage} />
         </Switch>
     );
     return (

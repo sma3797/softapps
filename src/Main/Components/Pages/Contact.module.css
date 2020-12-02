@@ -13,6 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../../shared/assets/Images/Contact.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
 .HomeWidth{
@@ -42,22 +46,18 @@
     display: flex;
     flex-direction: column;
     width: 75%;
+    align-items: flex-start;
     /* border: 1px solid red; */
-    position: relative;
     
 }
 
-.LeftDiv h1 {
+.LeftDiv h1 ,.LeftDiv span{
     font-family: var(--aargau) !important;
     /* font-size: 5rem; */
     font-size: calc(2.2vw + 2.2vh + 2.2vmin);
     color: var(--secondary-red);
 }
 .LeftDiv p {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-.LeftDiv span {
     display: block;
     width: 75%;
     font-size: 1.1rem;
@@ -66,13 +66,13 @@
 
 .LeftDiv a{
     margin-top: 20px;
-    padding:  .7rem 5rem ;
+    padding:  .7rem 4rem ;
     border-radius: 8px;
     font-weight: bold;
     color: white;
     background-color: var(--primary-purple);
-    position: absolute;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 .LeftDiv img{
     position: absolute;

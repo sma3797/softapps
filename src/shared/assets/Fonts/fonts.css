@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aargau';
+    font-style: normal;
+    src: url('./Aargau-Medium.ttf');
+}
+
+:root {
+    --aargau: 'Aargau';
+}
