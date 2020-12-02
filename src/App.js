@@ -1,4 +1,4 @@
-import Layout from "./Pages/Layout/Layout";
+import Layout from "./Main/Layout/Layout";
 import classes from "./App.module.css";
 import { isMobile, isTablet } from "react-device-detect";
 

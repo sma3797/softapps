@@ -1,10 +1,11 @@
 import React, { Suspense, useContext, useEffect, useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner";
+import MainNavigation from "../Components/Navigations/MainNavigation";
 
 import classes from "./Layout.module.css";
 
-const Home = React.lazy(() => import("./../Components/Home/Home"));
+const Home = React.lazy(() => import("./../Components/Pages/Home"));
 
 // import { Helmet } from "react-helmet";
 // <Helmet>
@@ -29,8 +30,8 @@ const Layout = (props) => {
                         <div className="center">
                             <LoadingSpinner />
                         </div>
-                    }
-                >
+                    }>
+                    <MainNavigation />
                     <div>{routes}</div>
                 </Suspense>
             </div>
