@@ -1,0 +1,103 @@
+import React from "react";
+import classes from "./About.module.css";
+
+const About = (props) => {
+    return (
+        <div className={classes.About}>
+            <div>AAbout</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+        </div>
+    );
+};
+
+export default About;

@@ -8,17 +8,29 @@ import Careers from "./Careers";
 import Contact from "./Contact";
 
 const PortfolioSection = React.lazy(() => import("../Pages/Portfolio"));
+const AboutSection = React.lazy(() => import("../Pages/About"));
+
+const PortfolioGrid = React.lazy(() => import("../../../shared/components/UIElements/PortfolioGrid"));
 
 const MainPage = (props) => {
     const { exploreState, exploreFunctionHandler } = props;
 
     const transformScroll = (event) => {
-        if (event.deltaY < 0) {
-            window.scrollBy(-500, 0);
+        // Change Here -> ! -> ''
+        if (exploreState) {
+            if (event.deltaY < 0) {
+                window.scrollBy(0, -500);
+                return;
+            }
+            window.scrollBy(0, 500);
+            event.preventDefault();
             return;
         }
-        // }
-        window.scrollBy(500, 0);
+        if (event.deltaY < 0) {
+            !exploreState && window.scrollBy(-500, 0);
+            return;
+        }
+        !exploreState && window.scrollBy(500, 0);
         event.preventDefault();
     };
     var element = document.scrollingElement || document.documentElement;
@@ -40,7 +52,6 @@ const MainPage = (props) => {
     }
 
     if (exploreState === "portfolio") {
-        console.log("portfolio");
         content = (
             <div className={classes.MainPage}>
                 <PortfolioSection />
@@ -48,11 +59,22 @@ const MainPage = (props) => {
         );
     }
 
-    content = (
-        <div className={classes.MainPage}>
-            <PortfolioSection />
-        </div>
-    );
+    if (exploreState === "about") {
+        content = (
+            <div className={classes.MainPage}>
+                <AboutSection />
+            </div>
+        );
+    }
+
+    // Change Here
+
+    // content = (
+    //     <div className={classes.MainPage}>
+    //         <PortfolioGrid />
+    //         {/* <PortfolioSection /> */}
+    //     </div>
+    // );
 
     return content;
 };

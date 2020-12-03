@@ -1,0 +1,11 @@
+@import "../../../shared/assets/Fonts/fonts";
+@import "../../../shared/assets/CSS/colors.css";
+
+.About{
+    /* width: 100vw;
+    height: calc( 100vh - 86px);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}

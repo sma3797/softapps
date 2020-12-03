@@ -29,9 +29,6 @@
     display: flex;
     justify-content: flex-end;
 }
-.Left img {
-    rotate: 180deg;
-}
 .Arrow img {
     cursor: pointer;
     width: 45px;

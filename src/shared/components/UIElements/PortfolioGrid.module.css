@@ -1,0 +1,75 @@
+@import "../../assets/Fonts/fonts";
+@import "../../assets/CSS/colors.css";
+
+.PortfolioGrid{
+    width: 100vw;
+    height: calc( 100vh - 86px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: pink; */
+    /* border: 1px solid red; */
+}
+
+.PortfolioGrid_Banner{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Left {
+    width: 62%;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Left_Container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Right {
+    height: 125%;
+    width: 30%;
+    background-color: var(--tertiary-red);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+}
+
+.Right_Carousel{
+    flex: 1;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.Right_Carousel_Image{
+    display: flex;
+}
+.Right_Carousel_Image img{
+       width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    /* border: 1px solid red !important; */
+}
+
+.Right_Carousel_Arrow_Images{
+    margin-top: 10px;
+}
+
+.Right_Carousel_Arrow_Images img{
+    width: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
