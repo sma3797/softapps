@@ -1,2 +1,0 @@
-(this.webpackJsonpsoftapps=this.webpackJsonpsoftapps||[]).push([[3],{34:function(e,s,t){e.exports={Home:"Home_Home__w5Chq"}},35:function(e,s,t){"use strict";t.r(s);var o=t(2),n=(t(0),t(34)),c=t.n(n);s.default=function(e){return Object(o.jsx)("div",{className:c.a.Home,children:Object(o.jsx)("div",{children:"Home"})})}}}]);
-//# sourceMappingURL=3.2be0f0c5.chunk.js.map

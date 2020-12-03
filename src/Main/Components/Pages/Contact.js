@@ -1,7 +1,5 @@
 import React from "react";
 import classes from "./Contact.module.css";
-import Digital from "../../../shared/assets/Images/Digital.png";
-import ServicesImage from "../../../shared/assets/Images/Services.png";
 
 const Contact = (props) => {
     return (
@@ -16,10 +14,24 @@ const Contact = (props) => {
                             But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I
                             will give you a complete account of the system, and.
                         </p>
-                        <a>Apply</a>
+                        <div className={classes.Form}>
+                            <div className={classes.FormElement}>
+                                <input placeholder="Name" />
+                            </div>
+                            <div className={classes.FormElement}>
+                                <input placeholder="Email" />
+                            </div>
+                            <div className={classes.FormElement}>
+                                <input placeholder="Subject" />
+                            </div>
+                            <div className={classes.FormElement}>
+                                <textarea placeholder="Type Your Message" />
+                            </div>
+                            <a>Submit</a>
+                        </div>
                     </div>
                 </div>
-                <div className={classes.Right}>{/* <img src={ServicesImage} /> */}</div>
+                <div className={classes.Right}></div>
             </div>
         </div>
     );

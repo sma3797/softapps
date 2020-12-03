@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/Pages/Components/Home/Home.module.css"],"names":[],"mappings":"AAAA,kBACI,WAAY,CACZ,YAAc,CACd,qBACJ","file":"3.8d01eeca.chunk.css","sourcesContent":[".Home{\r\n    width: 100vw;\r\n    height:  100vh;\r\n    background-color: pink;\r\n}"]}
