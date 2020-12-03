@@ -48,6 +48,12 @@ const MainPage = (props) => {
         );
     }
 
+    content = (
+        <div className={classes.MainPage}>
+            <PortfolioSection />
+        </div>
+    );
+
     return content;
 };
 

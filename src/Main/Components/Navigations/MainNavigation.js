@@ -27,7 +27,7 @@ const MainNavigation = (props) => {
             <div className={classes.MainNavigation}>
                 <div className={classes.Logo}>
                     <div style={{ width: "80%" }}>
-                        <NavLink style={{ cursor: "pointer" }} to={`/`}>
+                        <NavLink onClick={() => exploreFalseFunctionHandler(home)} style={{ cursor: "pointer" }} to={`/`}>
                             <img src={Logo} alt="Logo SoftApps" />
                         </NavLink>
                     </div>
