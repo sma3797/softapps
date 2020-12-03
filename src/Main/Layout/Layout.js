@@ -5,37 +5,34 @@ import MainNavigation from "../Components/Navigations/MainNavigation";
 
 import classes from "./Layout.module.css";
 
-const MainPage = React.lazy(() => import("../Components/Pages/0MainPage"));
-
-// import { Helmet } from "react-helmet";
-// <Helmet>
-// {/* <meta charSet="utf-8" /> */}
-// <title>Snaxa</title>
-// </Helmet>
+const MainPage = React.lazy(() => import("../Components/MainSite/0MainPage"));
 
 const Layout = (props) => {
+    const [exploreState, setExploreState] = useState(false);
+
+    const exploreFunctionHandler = (state) => {
+        setExploreState(state);
+    };
+
     let routes;
     routes = (
         <Switch>
-            {/* <Route path="/" exact render={() => <Redirect to={`/${branch}`} />} /> */}
-            <Route path="/" exact component={MainPage} />
+            <Route
+                path="/"
+                exact
+                render={(props) => <MainPage {...props} exploreState={exploreState} exploreFunctionHandler={exploreFunctionHandler} />}
+            />
         </Switch>
     );
+
     return (
         <div className={classes.Layout}>
             <div className={classes.Layout__Contaienr}>
-                {/* {pathname !== `/${branch}/livechat` && <MainNavigation />} */}
-                <Suspense
-                    fallback={
-                        <div className="center">
-                            <LoadingSpinner />
-                        </div>
-                    }>
-                    <MainNavigation />
+                <Suspense fallback={<div className="center"></div>}>
+                    <MainNavigation exploreFunctionHandler={exploreFunctionHandler} />
                     <div>{routes}</div>
                 </Suspense>
             </div>
-            {/* {pathname !== `/${branch}/livechat` && <Footer />} */}
         </div>
     );
 };

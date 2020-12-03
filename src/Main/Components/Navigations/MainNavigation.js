@@ -8,12 +8,19 @@ import Email from "../../../shared/assets/Images/Email.png";
 import Call from "../../../shared/assets/Images/Call.png";
 
 const MainNavigation = (props) => {
+    const { exploreFunctionHandler } = props;
+
     const home = useRef();
     const services = useRef();
     const portfolio = useRef();
     const about = useRef();
     const careers = useRef();
     const contact = useRef();
+
+    const exploreFalseFunctionHandler = (state) => {
+        state.current.click();
+        exploreFunctionHandler(false);
+    };
 
     return (
         <MainHeader>
@@ -26,22 +33,22 @@ const MainNavigation = (props) => {
                     </div>
                 </div>
                 <div className={classes.NavLinks}>
-                    <a onClick={() => home.current.click()} ref={home} href={`#home`}>
+                    <a onClick={() => exploreFalseFunctionHandler(home)} ref={home} href={`#home`}>
                         Home
                     </a>
-                    <a onClick={() => services.current.click()} ref={services} href={`#services`}>
+                    <a onClick={() => exploreFalseFunctionHandler(services)} ref={services} href={`#services`}>
                         Services
                     </a>
-                    <a onClick={() => about.current.click()} ref={about} href={`#about`}>
+                    <a onClick={() => exploreFalseFunctionHandler(about)} ref={about} href={`#about`}>
                         About
                     </a>
-                    <a onClick={() => portfolio.current.click()} ref={portfolio} href={`#portfolio`}>
+                    <a onClick={() => exploreFalseFunctionHandler(portfolio)} ref={portfolio} href={`#portfolio`}>
                         Portfolio
                     </a>
-                    <a onClick={() => careers.current.click()} ref={careers} href={`#careers`}>
+                    <a onClick={() => exploreFalseFunctionHandler(careers)} ref={careers} href={`#careers`}>
                         Careers
                     </a>
-                    <a onClick={() => contact.current.click()} ref={contact} href={`#contact`}>
+                    <a onClick={() => exploreFalseFunctionHandler(contact)} ref={contact} href={`#contact`}>
                         Contact Us
                     </a>
                 </div>
