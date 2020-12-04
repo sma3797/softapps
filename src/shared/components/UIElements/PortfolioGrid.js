@@ -49,7 +49,8 @@ const PortfolioGrid = (props) => {
                                 showThumbs={false}
                                 showIndicators={false}
                                 showStatus={false}
-                                showArrows={false}>
+                                showArrows={false}
+                            >
                                 {images &&
                                     images.map((i) => {
                                         return (
@@ -81,7 +82,8 @@ const PortfolioGrid = (props) => {
                                 showThumbs={false}
                                 showIndicators={false}
                                 showStatus={false}
-                                showArrows={false}>
+                                showArrows={false}
+                            >
                                 {images &&
                                     images.map((i) => {
                                         return (

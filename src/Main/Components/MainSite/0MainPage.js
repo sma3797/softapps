@@ -9,6 +9,7 @@ import Contact from "./Contact";
 
 const PortfolioSection = React.lazy(() => import("../Pages/Portfolio"));
 const AboutSection = React.lazy(() => import("../Pages/About"));
+const CareerSection = React.lazy(() => import("../Pages/Career"));
 
 const PortfolioGrid = React.lazy(() => import("../../../shared/components/UIElements/PortfolioGrid"));
 
@@ -67,16 +68,23 @@ const MainPage = (props) => {
         );
     }
 
+    if (exploreState === "career") {
+        content = (
+            <div className={classes.MainPage}>
+                <CareerSection />
+            </div>
+        );
+    }
+
     // Change Here
+    // return content;
 
-    // content = (
-    //     <div className={classes.MainPage}>
-    //         <PortfolioGrid />
-    //         {/* <PortfolioSection /> */}
-    //     </div>
-    // );
+    return (
+        <div className={classes.MainPage}>
+            <CareerSection />
+        </div>
+    );
 
-    return content;
 };
 
 export default MainPage;

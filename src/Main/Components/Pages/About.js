@@ -4,7 +4,7 @@ import classes from "./About.module.css";
 const About = (props) => {
     return (
         <div className={classes.About}>
-            <div>About</div>
+            <div>AAbout</div>
             <div>About</div>
             <div>About</div>
             <div>About</div>

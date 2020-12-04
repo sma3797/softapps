@@ -128,7 +128,7 @@ const Portfolio = (props) => {
             >
                 <Slide>{mainCarousel}</Slide>
                 {portfolioMode === "mobile" && (
-                    <Slide id="mobile">
+                    <Slide id="mobile" style={{ backgroundColor: "transparent" }}>
                         <PortfolioGrid
                             backgroundColor={"#DF3D3D"}
                             mode={"right"}
