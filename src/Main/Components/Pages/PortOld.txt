@@ -45,15 +45,10 @@ const Portfolio = (props) => {
         setSelectedSlide((prState) => (prState -= 1));
     };
     const portfolioModeHandler = (state, mode) => {
-        console.log("portfolioModeHandler", mode);
-        document.scrollingElement.scroll();
-        setSelectedPortfolio(1);
+        // console.log("portfolioModeHandler", mode);
         setPortfolioMode(mode);
         state.current.click();
-        window.scrollBy(500, 500);
     };
-
-    // element.addEventListener("wheel", transformScroll);
 
     useEffect(() => {}, []);
 
@@ -119,85 +114,68 @@ const Portfolio = (props) => {
     );
 
     return (
-        <div style={{ width: "100%", scrollbarWidth: "none" }}>
-            <FullPage
-                afterChange={(e) => {
-                    if (e.to === 0) setPortfolioMode(false);
-                }}
-                initialSlide={1}
-            >
-                <Slide>{mainCarousel}</Slide>
-                {portfolioMode === "mobile" && (
-                    <Slide id="mobile">
-                        <PortfolioGrid
-                            backgroundColor={"#DF3D3D"}
-                            mode={"right"}
-                            images={[snaxa1, snaxa2, snaxa3]}
-                            primaryHeading={"ECOMMERCE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
-                        />
-                    </Slide>
-                )}
-                {portfolioMode === "mobile" && (
-                    <Slide>
-                        <PortfolioGrid
-                            backgroundColor={"#DF3D3D"}
-                            mode={"left"}
-                            images={[snaxa1, snaxa2, snaxa3]}
-                            primaryHeading={"ECOMMERCE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
-                        />
-                    </Slide>
-                )}
-                {portfolioMode === "mobile" && (
-                    <Slide>
-                        <PortfolioGrid
-                            backgroundColor={"#DF3D3D"}
-                            mode={"right"}
-                            images={[snaxa1, snaxa2, snaxa3]}
-                            primaryHeading={"ECOMMERCE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
-                        />
-                    </Slide>
-                )}
-                {portfolioMode === "website" && (
-                    <Slide id="website">
-                        <PortfolioGrid
-                            backgroundColor={"#DF3D3D"}
-                            mode={"right"}
-                            images={[snaxa1, snaxa2, snaxa3]}
-                            primaryHeading={"WEBSITE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
-                        />
-                    </Slide>
-                )}
-                {portfolioMode === "website" && (
-                    <Slide>
-                        <PortfolioGrid
-                            backgroundColor={"#DF3D3D"}
-                            mode={"left"}
-                            images={[snaxa1, snaxa2, snaxa3]}
-                            primaryHeading={"WEBSITE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
-                        />
-                    </Slide>
-                )}
-            </FullPage>
+        <div style={{ display: "flex", overflowX: "hidden", scrollbarWidth: "none" }}>
+            {portfolioMode === "mobile" && (
+                <div id="mobile">
+                    <FullPage
+                        // afterChange={(e) => {
+                        //     console.log("afterChange ", e);
+                        //     if (e.to === 0) setResetAlert(true);
+                        //     else setResetAlert(false);
+                        // }}
+                        duration={400}>
+                        <Slide>{mainCarousel}</Slide>
+                        <Slide>
+                            <PortfolioGrid
+                                backgroundColor={"#DF3D3D"}
+                                mode={"right"}
+                                images={[snaxa1, snaxa2, snaxa3]}
+                                primaryHeading={"ECOMMERCE"}
+                                secondaryHeading={"SNAXA"}
+                                mainText={
+                                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
+                                }
+                            />
+                        </Slide>
+                        <Slide>
+                            <PortfolioGrid
+                                backgroundColor={"#DF3D3D"}
+                                mode={"left"}
+                                images={[snaxa1, snaxa2, snaxa3]}
+                                primaryHeading={"ECOMMERCE"}
+                                secondaryHeading={"SNAXA"}
+                                mainText={
+                                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
+                                }
+                            />
+                        </Slide>
+                        <Slide>
+                            <PortfolioGrid
+                                backgroundColor={"#DF3D3D"}
+                                mode={"right"}
+                                images={[snaxa1, snaxa2, snaxa3]}
+                                primaryHeading={"ECOMMERCE"}
+                                secondaryHeading={"SNAXA"}
+                                mainText={
+                                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
+                                }
+                            />
+                        </Slide>
+                        <Slide>
+                            <PortfolioGrid
+                                backgroundColor={"#DF3D3D"}
+                                mode={"right"}
+                                images={[snaxa1, snaxa2, snaxa3]}
+                                primaryHeading={"ECOMMERCE"}
+                                secondaryHeading={"SNAXA"}
+                                mainText={
+                                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
+                                }
+                            />
+                        </Slide>
+                    </FullPage>
+                </div>
+            )}
         </div>
     );
 };

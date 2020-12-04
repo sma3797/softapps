@@ -2,8 +2,9 @@
 @import "../../assets/CSS/colors.css";
 
 .PortfolioGrid{
-    width: 100vw;
-    height: calc( 100vh - 86px);
+    width: 100%;
+    /* height: calc( 100vh - 66px); */
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +33,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    color: white;
+}
+
+.Left_Container h2 {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+.Left_Container h1 {
+    font-family: var(--aargau) !important;
+    font-size: 4.1rem;
+    line-height: 1;
+}
+.Left_Container p {
+    width: 80%;
+    text-align: right;
 }
 
 .Right {
@@ -69,7 +85,37 @@
 }
 
 .Right_Carousel_Arrow_Images img{
-    width: 25px;
-    margin-left: 10px;
-    cursor: pointer;
+    width: 25px !important;
+    margin-left: 10px !important;
+    cursor: pointer !important;
+    position: relative;
+}
+
+.LeftLeft{
+    width: 62%;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.LeftLeft_Container{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+.LeftLeft_Container h2 {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+.LeftLeft_Container h1 {
+    font-family: var(--aargau) !important;
+    font-size: 4.1rem;
+    line-height: 1;
+}
+.LeftLeft_Container p {
+    width: 80%;
 }

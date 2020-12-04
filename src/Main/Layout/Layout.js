@@ -11,6 +11,7 @@ const Layout = (props) => {
     const [exploreState, setExploreState] = useState(false);
 
     const exploreFunctionHandler = (state) => {
+        console.log("exploreFunctionHandler", state);
         setExploreState(state);
     };
 

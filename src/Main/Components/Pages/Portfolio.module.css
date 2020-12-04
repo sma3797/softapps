@@ -2,14 +2,16 @@
 @import "../../../shared/assets/CSS/colors.css";
 
 .Portfolio{
-    width: 100vw;
-    height: calc( 100vh - 86px);
+    width: 100%;
+    height: calc( 100vh - 66px);
     padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* background-color: pink; */
     /* border: 1px solid red; */
+    /* margin-top: 66px; */
+    
 }
 
 .Left,.Right{
@@ -68,4 +70,13 @@
     background-color: var(--primary-purple);
     font-size: 1.1rem;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.HideScrollBar::-webkit-scrollbar {
+    display: none;
+}
+.HideScrollBar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
 }
