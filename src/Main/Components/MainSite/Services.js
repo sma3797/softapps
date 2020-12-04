@@ -15,7 +15,7 @@ const Services = (props) => {
                             But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I
                             will give you a complete account of the system, and.
                         </span>
-                        <a>Explore</a>
+                        <a onClick={() => props.exploreFunctionHandler("services")}>Explore</a>
                     </div>
                 </div>
                 <div className={classes.Right}>{/* <img src={ServicesImage} /> */}</div>

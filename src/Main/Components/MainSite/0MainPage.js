@@ -10,20 +10,19 @@ import Contact from "./Contact";
 const PortfolioSection = React.lazy(() => import("../Pages/Portfolio"));
 const AboutSection = React.lazy(() => import("../Pages/About"));
 const CareerSection = React.lazy(() => import("../Pages/Career"));
-
-const PortfolioGrid = React.lazy(() => import("../../../shared/components/UIElements/PortfolioGrid"));
+const ServicesSection = React.lazy(() => import("../Pages/Services"));
 
 const MainPage = (props) => {
     const { exploreState, exploreFunctionHandler } = props;
 
     const transformScroll = (event) => {
         // Change Here -> ! -> ''
-        if (exploreState) {
+        if (!exploreState) {
             if (event.deltaY < 0) {
-                window.scrollBy(0, -500);
+                window.scrollBy(0, -350);
                 return;
             }
-            window.scrollBy(0, 500);
+            window.scrollBy(0, 350);
             event.preventDefault();
             return;
         }
@@ -75,16 +74,22 @@ const MainPage = (props) => {
             </div>
         );
     }
+    if (exploreState === "services") {
+        content = (
+            <div className={classes.MainPage}>
+                <ServicesSection />
+            </div>
+        );
+    }
 
     // Change Here
     // return content;
 
     return (
         <div className={classes.MainPage}>
-            <CareerSection />
+            <ServicesSection />
         </div>
     );
-
 };
 
 export default MainPage;

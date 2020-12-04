@@ -2,13 +2,38 @@ import React, { useState } from "react";
 import classes from "./Career.module.css";
 
 import cvLogo from "../../../shared/assets/Images/cvLogo.png";
+import DownArrow from "../../../shared/assets/Images/DownArrow.png";
 
 const Career = (props) => {
     const [file, setFile] = useState(undefined);
+    const [selected, setSelected] = useState("Select Position");
 
     return (
         <div className={classes.Career}>
             <h2>APPLY ONLINE</h2>
+            <nav className={classes.menu}>
+                <ol>
+                    <li className={classes.menuItem}>
+                        <div className={classes.DropDown_Main}>
+                            <p>{selected}</p>
+                            <div>
+                                <img src={DownArrow} />
+                            </div>
+                        </div>
+                        <ol className={classes.subMenu}>
+                            <li onClick={() => setSelected("React Dev")} className={classes.menuItem}>
+                                <span>React Dev</span>
+                            </li>
+                            <li onClick={() => setSelected("React Native Dev")} className={classes.menuItem}>
+                                <span>React Native Dev</span>
+                            </li>
+                            <li onClick={() => setSelected("WordPress Dev")} className={classes.menuItem}>
+                                <span>WordPress Dev</span>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </nav>
             <div className={classes.Form}>
                 <div className={classes.FormContainer}>
                     <div className={classes.Left}>
@@ -19,7 +44,7 @@ const Career = (props) => {
                             <input placeholder="Last Name" />
                         </div>
                         <div className={classes.FormElement}>
-                            <input placeholder="Email" />
+                            <input type="email" placeholder="Email" />
                         </div>
                         <div className={classes.FormElement}>
                             <input placeholder="Phone" />

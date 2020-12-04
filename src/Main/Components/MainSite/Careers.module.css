@@ -13,6 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../../shared/assets/Images/Careers.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
     margin-top: 66px;
 }
 
