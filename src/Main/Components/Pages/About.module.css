@@ -128,3 +128,47 @@
 .whyUsContentRighttDivImagesTilesDiv > img {
   max-width: 100%;
 }
+.ourAchievements {
+  /* border: solid 1px #000; */
+  min-width: 100%;
+  background-image: linear-gradient(
+    #b01117,
+    #aa121b,
+    #991526,
+    #7d1a39,
+    #562253,
+    #282b73
+  );
+  margin: 2rem 0;
+}
+.achievementsItemsMainDiv {
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: #ccc; */
+  margin: 0 10%;
+  padding: 25px 0;
+}
+.achievementsItemsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.achievementsItemsImageDiv {
+  width: 100px;
+  height: 100px;
+}
+.achievementsItemsImageDiv > img {
+  max-width: 100% !important;
+}
+.achievementsItemsDiv div p,
+.achievementsItemsDiv div h1 {
+  color: #fff;
+}
+.achievementsItemsDiv div p {
+  padding: 15px 0 0 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+.achievementsItemsDiv div h1 {
+  font-size: 45px;
+}
