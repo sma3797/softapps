@@ -206,6 +206,7 @@ const About = (props) => {
             display: "flex",
             justifyContent: "center",
             // transform: "translateY(-190px)",
+            //fucking style
           }}
         >
           <button
