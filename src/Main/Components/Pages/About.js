@@ -5,11 +5,16 @@ import WhoWeAreLeftCircle from "../../../shared/assets/Images/whoWeAreLeftCircle
 import WhyUsLeftHalfCircle from "../../../shared/assets/Images/whyUsLeftHalfCircle.png";
 import WhoWeAreLeft from "../../../shared/assets/Images/whoWeAreLeft.png";
 import BestQuality from "../../../shared/assets/Images/BestQuality.png";
+import AwardAchieved from "../../../shared/assets/Images/AwardAchieved.png";
+import HappyClients from "../../../shared/assets/Images/HappyClients.png";
+import TotalProjects from "../../../shared/assets/Images/TotalProjects.png";
 import T24x7LiveSupport from "../../../shared/assets/Images/24x7LiveSupport.png";
 import BestROITechniques from "../../../shared/assets/Images/BestROITechniques.png";
 import ExperiencedProfessionals from "../../../shared/assets/Images/ExperiencedProfessionals.png";
 import ResultOrientedProjects from "../../../shared/assets/Images/ResultOrientedProjects.png";
 import classes from "./About.module.css";
+import Footer from "../Navigations/Footer";
+import ContactInfo from "../Navigations/ContactInfo";
 
 const About = (props) => {
     const services = [
@@ -32,6 +37,26 @@ const About = (props) => {
             id: 4,
             title: "Prototype Design",
             image: Web,
+        },
+    ];
+    const achievements = [
+        {
+            id: 1,
+            image: TotalProjects,
+            title: "Total Projects",
+            qty: 21,
+        },
+        {
+            id: 2,
+            image: HappyClients,
+            title: "Happy Clients",
+            qty: 113,
+        },
+        {
+            id: 1,
+            image: AwardAchieved,
+            title: "Award Achieved",
+            qty: 25,
         },
     ];
     return (
@@ -191,22 +216,48 @@ const About = (props) => {
                     </button>
                 </div>
             </div>
-            <div className={classes.ourTeam}>
-                <div className={classes.whyUsHeading}>
-                    <h2>OUR TEAM</h2>
+            {/* <div className={classes.ourTeam}>
+        <div className={classes.whyUsHeading}>
+          <h2>OUR TEAM</h2>
+        </div>
+        <div>
+          <div style={{ display: "flex" }}>
+            {[...Array(5)].map((i, j) => {
+              return (
+                <div
+                  style={{ width: "180px", height: "180px", margin: "0 15px" }}
+                >
+                  <img
+                    style={{ maxWidth: "100%" }}
+                    src={BestQuality}
+                    alt="Best Quality"
+                  />
                 </div>
-                <div>
-                    <div style={{ display: "flex" }}>
-                        {[...Array(5)].map((i, j) => {
-                            return (
-                                <div style={{ width: "180px", height: "180px", margin: "0 15px" }}>
-                                    <img style={{ maxWidth: "100%" }} src={BestQuality} alt="Best Quality" />
+              );
+            })}
+          </div>
+        </div>
+      </div> */}
+            <div className={classes.ourAchievements}>
+                <div className={classes.achievementsItemsMainDiv}>
+                    {achievements.map((achievement, i) => {
+                        return (
+                            <div className={classes.achievementsItemsDiv} key={i}>
+                                <div className={classes.achievementsItemsImageDiv}>
+                                    <img src={achievement.image} alt={achievement.title} />
                                 </div>
-                            );
-                        })}
-                    </div>
+                                <div>
+                                    <p>{achievement.title}</p>
+                                </div>
+                                <div>
+                                    <h1>{`+ ${achievement.qty}`}</h1>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

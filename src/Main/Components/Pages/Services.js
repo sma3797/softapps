@@ -34,6 +34,7 @@ import services1 from "../../../shared/assets/Images/services (1).png";
 import services2 from "../../../shared/assets/Images/services (2).png";
 import services3 from "../../../shared/assets/Images/services (3).png";
 import whatWeDo3 from "../../../shared/assets/Images/whatWeDo3.png";
+import Footer from "../Navigations/Footer";
 
 const Services = (props) => {
     const [selectedSlide, setSelectedSlide] = useState(0);
@@ -294,7 +295,7 @@ const Services = (props) => {
                     <img src={webProt} />
                 </div>
             </div>
-            <div className={classes.Support}>
+            <div style={{ marginBottom: "60px" }} className={classes.Support}>
                 <div className={classes.Service_Support}>
                     <div className={classes.Service_Support_Container}>
                         <div>
@@ -316,6 +317,7 @@ const Services = (props) => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

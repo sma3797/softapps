@@ -17,7 +17,7 @@ const MainPage = (props) => {
 
     const transformScroll = (event) => {
         // Change Here -> ! -> ''
-        if (!exploreState) {
+        if (exploreState) {
             if (event.deltaY < 0) {
                 window.scrollBy(0, -350);
                 return;
@@ -83,7 +83,7 @@ const MainPage = (props) => {
     }
 
     // Change Here
-    // return content;
+    return content;
 
     return (
         <div className={classes.MainPage}>
