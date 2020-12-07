@@ -105,13 +105,17 @@
 
 .FormElement {
     width: 100%;
+    margin-bottom: 12px;
 }
 .FormElement input, .FormElement textarea{
     display: block;
     width: 100%;
     padding: .8rem .8rem;
-    margin-bottom: 12px;
     border-radius: 8px;
     border: 1px solid #707070;
     font: inherit;
+}
+.FormElement p{
+    font-size: .85rem;
+    color: var(--primary-red);
 }
