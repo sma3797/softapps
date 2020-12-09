@@ -6,7 +6,7 @@
     height: calc( 100vh - 66px); */
     width: 100vw;
     /* Change Here */
-    height: calc( 100vh - 86px);
+    height: calc( 100vh - 66px);
     /* font-family: var(--aargau) !important; */
     padding: 2rem;
     /* max-height: 1320px; */
@@ -31,6 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: left;
     /* border: 1px solid red; */
 }
 
@@ -76,10 +77,10 @@
     font-size: 1.1rem;
 }
 .LeftDiv img{
-    position: absolute;
-    top: 13px;
-    width: 63px;
-    left: 10px;
+    position: absolute !important;
+    top: 13px !important;
+    width: 63px !important;
+    left: 10px !important;
 }
 
 .Right img{

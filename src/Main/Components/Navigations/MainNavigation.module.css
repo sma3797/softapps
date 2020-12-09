@@ -1,9 +1,9 @@
 @import "../../../shared/assets/CSS/colors.css";
 
 .MainNavigation {
-	width: 85%;
+	min-width: 95%;
     height: 100%;
-	/* max-width: 1420px; */
+	max-width: 1420px;
 	/* height: 100%; */
 	display: flex;
 	justify-content: space-between;
@@ -16,7 +16,7 @@
 }
 .Logo img{
     width: 100%;
-    max-width: 130px;
+    max-width: 165px;
 }
 .NavLinks{
     width: 60%;
@@ -29,6 +29,7 @@
     color: var(--secondary-red);
     font-weight: bold;
     margin: 0 .5rem;
+    cursor: pointer;
 }
 .NavLinks a.active{
     color: white !important;
@@ -39,6 +40,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.RightNavLinks a{
+text-decoration: none;
+cursor: pointer;
 }
 
 .RightNavLinks a img{

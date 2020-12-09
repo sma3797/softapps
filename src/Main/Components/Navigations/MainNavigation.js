@@ -8,7 +8,7 @@ import Email from "../../../shared/assets/Images/Email.png";
 import Call from "../../../shared/assets/Images/Call.png";
 
 const MainNavigation = (props) => {
-    const { exploreFunctionHandler } = props;
+    const { exploreFunctionHandler, slideNumber } = props;
 
     const home = useRef();
     const services = useRef();
@@ -18,52 +18,56 @@ const MainNavigation = (props) => {
     const contact = useRef();
 
     const exploreFalseFunctionHandler = (state) => {
-        state.current.click();
-        exploreFunctionHandler(false);
+        // state.current.click();
+        exploreFunctionHandler(state);
     };
 
     return (
         <MainHeader>
             <div className={classes.MainNavigation}>
                 <div className={classes.Logo}>
-                    <div style={{ width: "80%" }}>
-                        <NavLink onClick={() => exploreFalseFunctionHandler(home)} style={{ cursor: "pointer" }} to={`/`}>
+                    <div style={{ width: "90%" }}>
+                        <NavLink onClick={() => exploreFalseFunctionHandler(0)} style={{ cursor: "pointer" }} to={`/`}>
                             <img src={Logo} alt="Logo SoftApps" />
                         </NavLink>
                     </div>
                 </div>
                 <div className={classes.NavLinks}>
-                    <a onClick={() => exploreFalseFunctionHandler(home)} ref={home} href={`#home`}>
+                    <a className={slideNumber === 0 && classes.active} onClick={() => exploreFalseFunctionHandler(0)} ref={home}>
                         Home
                     </a>
-                    <a onClick={() => exploreFalseFunctionHandler(services)} ref={services} href={`#services`}>
+                    <a className={slideNumber === 1 && classes.active} onClick={() => exploreFalseFunctionHandler(1)} ref={services}>
                         Services
                     </a>
-                    <a onClick={() => exploreFalseFunctionHandler(about)} ref={about} href={`#about`}>
+                    <a className={slideNumber === 2 && classes.active} onClick={() => exploreFalseFunctionHandler(2)} ref={about}>
                         About
                     </a>
-                    <a onClick={() => exploreFalseFunctionHandler(portfolio)} ref={portfolio} href={`#portfolio`}>
+                    <a className={slideNumber === 3 && classes.active} onClick={() => exploreFalseFunctionHandler(3)} ref={portfolio}>
                         Portfolio
                     </a>
-                    <a onClick={() => exploreFalseFunctionHandler(careers)} ref={careers} href={`#careers`}>
+                    <a className={slideNumber === 4 && classes.active} onClick={() => exploreFalseFunctionHandler(4)} ref={careers}>
                         Careers
                     </a>
-                    <a onClick={() => exploreFalseFunctionHandler(contact)} ref={contact} href={`#contact`}>
+                    <a
+                        className={(slideNumber === 6 || slideNumber === 5) && classes.active}
+                        onClick={() => exploreFalseFunctionHandler(5)}
+                        ref={contact}
+                    >
                         Contact Us
                     </a>
                 </div>
                 <div className={classes.RightNavLinks}>
-                    <NavLink to={`/e`}>
+                    <a href="mailto:management@softapps.io">
                         <img src={Email} alt="Email SoftApps" />
-                    </NavLink>
+                    </a>
 
-                    <NavLink to={`/c`}>
+                    <a href="tel:+15145503281">
                         <img src={Call} alt="Call SoftApps" />
-                    </NavLink>
+                    </a>
 
-                    <NavLink to={`/w`}>
+                    <a target="_blank" href="https://wa.me/+15145503281">
                         <img src={Whatsapp} alt="Whatsapp SoftApps" />
-                    </NavLink>
+                    </a>
                 </div>
             </div>
         </MainHeader>

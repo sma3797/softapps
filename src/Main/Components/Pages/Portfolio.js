@@ -82,7 +82,7 @@ const Portfolio = (props) => {
             </div>
             <div className={classes.Center}>
                 <div style={{ width: "100%" }}>
-                    <Carousel selectedItem={selectedSlide} showThumbs={false} showIndicators={false} showStatus={false} showArrows={false}>
+                    <Carousel  selectedItem={selectedSlide} showThumbs={false} showIndicators={false} showStatus={false} showArrows={false}>
                         <div className={classes.PortfolioSection}>
                             <img src={PortMobile} />
                             <h1>MOBILE</h1>

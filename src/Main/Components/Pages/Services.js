@@ -35,6 +35,7 @@ import services2 from "../../../shared/assets/Images/services (2).png";
 import services3 from "../../../shared/assets/Images/services (3).png";
 import whatWeDo3 from "../../../shared/assets/Images/whatWeDo3.png";
 import Footer from "../Navigations/Footer";
+import { NavLink } from "react-router-dom";
 
 const Services = (props) => {
     const [selectedSlide, setSelectedSlide] = useState(0);
@@ -131,7 +132,7 @@ const Services = (props) => {
                 </div>
             </div>
             <div className={classes.DevelopmentContainer}>
-                <div className={classes.DevelopmentContainer_Left}>
+                <NavLink to={`/blog/web-development`} className={classes.DevelopmentContainer_Left}>
                     <div className={classes.DevelopmentContainer_Left_Container}>
                         <h1>Web Development</h1>
                         <p>services</p>
@@ -180,7 +181,7 @@ const Services = (props) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </NavLink>
                 <div className={classes.DevelopmentContainer_Right}>
                     <img src={webProt} />
                 </div>
@@ -189,7 +190,7 @@ const Services = (props) => {
                 <div style={{ display: "flex", justifyContent: "flex-end" }} className={classes.DevelopmentContainer_Right}>
                     <img src={appProt} />
                 </div>
-                <div className={classes.DevelopmentContainer_Left}>
+                <NavLink to={`/blog/mobile-development`} className={classes.DevelopmentContainer_Left}>
                     <div className={classes.DevelopmentContainer_Left_Container}>
                         <h1>Mobile Development</h1>
                         <p>services</p>
@@ -238,10 +239,10 @@ const Services = (props) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </NavLink>
             </div>
             <div style={{ marginTop: "60px" }} className={classes.DevelopmentContainer}>
-                <div className={classes.DevelopmentContainer_Left}>
+                <NavLink to={`/blog/product-design`} className={classes.DevelopmentContainer_Left}>
                     <div className={classes.DevelopmentContainer_Left_Container}>
                         <h1>Product Design</h1>
                         <p>services</p>
@@ -290,12 +291,12 @@ const Services = (props) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </NavLink>
                 <div className={classes.DevelopmentContainer_Right}>
                     <img src={webProt} />
                 </div>
             </div>
-            <div style={{ marginBottom: "60px" }} className={classes.Support}>
+            <div style={{ marginTop: "60px", marginBottom: "60px" }} className={classes.Support}>
                 <div className={classes.Service_Support}>
                     <div className={classes.Service_Support_Container}>
                         <div>

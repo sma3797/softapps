@@ -6,22 +6,33 @@
   margin: 3rem 0;
 }
 .contactDetailDiv {
-  background-color: #362869;
-  width: 80%;
+  /* background-color: #362869; */
+  background: rgb(42,42,113);
+  background: linear-gradient(90deg, rgba(42,42,113,1) 0%, rgba(77,13,82,1) 26%, rgb(141, 15, 19) 100%); 
+  height: 70vh;
+  width: 100%;
   display: flex;
   /* justify-content: space-between; */
 }
 .detailDiv {
   width: 50%;
-  padding: 10px 20px;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: left;
 }
 .colHeading {
-  color: #ed2324;
+  color: #DF3D3D;
   font-size: 110%;
 }
 .mapDiv {
   width: 50%;
-  background-color: #ccc;
   margin: 20px 40px;
-  border-radius: 20px;
+  background-image: url('../../../shared/assets/Images/softAppsMap.PNG');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
 }

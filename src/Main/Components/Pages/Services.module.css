@@ -36,7 +36,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    min-width: 50%;
+    max-width: 415px;
     background-color: white;
     border: 1px solid rgb(167, 167, 167);
     border-radius: 12px;
@@ -157,6 +158,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 15px;
 }
 .WhatWeDo_Container_Block h1{
     line-height: 1;
@@ -185,16 +187,22 @@
 .DevelopmentContainer_Left{
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .DevelopmentContainer_Left_Container {
     width: 75%;
 }
-
-.DevelopmentContainer_Left h1{
+.DevelopmentContainer_Left_Container h1 {
     font-size: 2rem;
     color: var(--primary-purple);
     line-height: 1;
+    font-weight: bold;
+}
+
+.DevelopmentContainer_Left h1{
+
 }
 .DevelopmentContainer_Left p{
     font-size: 2.5rem;
@@ -214,7 +222,8 @@
 .TechStack_Container {
     display: flex;
     justify-content: space-between;
-    width: 65%;
+    min-width: 65%;
+    max-width: 405px;
     margin-bottom: 15px;
 }
 .TechStack {
