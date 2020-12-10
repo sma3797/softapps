@@ -11,6 +11,24 @@ import snaxa1 from "../../../shared/assets/Images/snaxa1.png";
 import snaxa2 from "../../../shared/assets/Images/snaxa2.png";
 import snaxa3 from "../../../shared/assets/Images/snaxa3.png";
 
+import Datesy from "../../../shared/assets/Images/0/Datesy-App.jpg";
+import Datesy2 from "../../../shared/assets/Images/0/Datesy-App1.jpg";
+import Rizipt from "../../../shared/assets/Images/0/Rizipt-App.jpg";
+import Rizipt1 from "../../../shared/assets/Images/0/Rizipt-App1.jpg";
+import RLD from "../../../shared/assets/Images/0/RLD-App.jpg";
+import RLD1 from "../../../shared/assets/Images/0/RLD-App1.jpg";
+import LDB from "../../../shared/assets/Images/0/LDB-App.jpg";
+import LDB2 from "../../../shared/assets/Images/0/LDB-App1.jpg";
+import SnaxaDriver from "../../../shared/assets/Images/0/SnaxaDriver-App.jpg";
+import SnaxaDriver1 from "../../../shared/assets/Images/0/SnaxaDriver-App1.jpg";
+import Afro from "../../../shared/assets/Images/0/afro-website.jpg";
+import Mentor from "../../../shared/assets/Images/0/Cold-Crew-Website1.jpg";
+import HairTress from "../../../shared/assets/Images/0/HairQuiz-Website.jpg";
+import HairTress1 from "../../../shared/assets/Images/0/tress-website.jpg";
+import LDBWeb from "../../../shared/assets/Images/0/LDB-Website.jpg";
+import Scarbo from "../../../shared/assets/Images/0/scarbo.jpg";
+import SNAXA from "../../../shared/assets/Images/0/snaxa-webite.jpg";
+
 import PortfolioGrid from "../../../shared/components/UIElements/PortfolioGrid";
 
 import { Carousel } from "react-responsive-carousel";
@@ -82,7 +100,7 @@ const Portfolio = (props) => {
             </div>
             <div className={classes.Center}>
                 <div style={{ width: "100%" }}>
-                    <Carousel  selectedItem={selectedSlide} showThumbs={false} showIndicators={false} showStatus={false} showArrows={false}>
+                    <Carousel selectedItem={selectedSlide} showThumbs={false} showIndicators={false} showStatus={false} showArrows={false}>
                         <div className={classes.PortfolioSection}>
                             <img src={PortMobile} />
                             <h1>MOBILE</h1>
@@ -132,12 +150,10 @@ const Portfolio = (props) => {
                         <PortfolioGrid
                             backgroundColor={"#DF3D3D"}
                             mode={"right"}
-                            images={[snaxa1, snaxa2, snaxa3]}
-                            primaryHeading={"ECOMMERCE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
+                            images={[Datesy, Datesy2]}
+                            primaryHeading={"Dating App"}
+                            secondaryHeading={"DATESY"}
+                            mainText={"Community Dating App"}
                         />
                     </Slide>
                 )}
@@ -146,12 +162,10 @@ const Portfolio = (props) => {
                         <PortfolioGrid
                             backgroundColor={"#DF3D3D"}
                             mode={"left"}
-                            images={[snaxa1, snaxa2, snaxa3]}
-                            primaryHeading={"ECOMMERCE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
+                            images={[Rizipt, Rizipt1]}
+                            primaryHeading={"File Sharing App"}
+                            secondaryHeading={"Rizipt"}
+                            mainText={"File sharing made easier"}
                         />
                     </Slide>
                 )}
@@ -160,12 +174,35 @@ const Portfolio = (props) => {
                         <PortfolioGrid
                             backgroundColor={"#DF3D3D"}
                             mode={"right"}
-                            images={[snaxa1, snaxa2, snaxa3]}
+                            images={[RLD, RLD1]}
                             primaryHeading={"ECOMMERCE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
+                            secondaryHeading={"Red Label District"}
+                            mainText={"Ecommerce made easier."}
+                        />
+                    </Slide>
+                )}
+
+                {portfolioMode === "mobile" && (
+                    <Slide>
+                        <PortfolioGrid
+                            backgroundColor={"#DF3D3D"}
+                            mode={"left"}
+                            images={[SnaxaDriver, SnaxaDriver1]}
+                            primaryHeading={"DRIVER"}
+                            secondaryHeading={"SNAXA Driver App"}
+                            mainText={"App for riders of SNAXA"}
+                        />
+                    </Slide>
+                )}
+                {portfolioMode === "mobile" && (
+                    <Slide>
+                        <PortfolioGrid
+                            backgroundColor={"#DF3D3D"}
+                            mode={"right"}
+                            images={[LDB, LDB2]}
+                            primaryHeading={"BLOGGING"}
+                            secondaryHeading={"Lady Bird Hub"}
+                            mainText={"Revolutionizing blogging"}
                         />
                     </Slide>
                 )}
@@ -174,12 +211,10 @@ const Portfolio = (props) => {
                         <PortfolioGrid
                             backgroundColor={"#DF3D3D"}
                             mode={"right"}
-                            images={[snaxa1, snaxa2, snaxa3]}
+                            images={[HairTress, HairTress1]}
                             primaryHeading={"WEBSITE"}
-                            secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
+                            secondaryHeading={"HairTress"}
+                            mainText={"A Hair Products Recommendation Website"}
                         />
                     </Slide>
                 )}
@@ -188,12 +223,58 @@ const Portfolio = (props) => {
                         <PortfolioGrid
                             backgroundColor={"#DF3D3D"}
                             mode={"left"}
-                            images={[snaxa1, snaxa2, snaxa3]}
+                            images={[SNAXA]}
                             primaryHeading={"WEBSITE"}
                             secondaryHeading={"SNAXA"}
-                            mainText={
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and."
-                            }
+                            mainText={"An Online Ecommerce Website for food delivery"}
+                        />
+                    </Slide>
+                )}
+                {portfolioMode === "website" && (
+                    <Slide id="website">
+                        <PortfolioGrid
+                            backgroundColor={"#DF3D3D"}
+                            mode={"right"}
+                            images={[Mentor]}
+                            primaryHeading={"WEBSITE"}
+                            secondaryHeading={"Mentoring"}
+                            mainText={"A Online Course Website"}
+                        />
+                    </Slide>
+                )}
+                {portfolioMode === "website" && (
+                    <Slide>
+                        <PortfolioGrid
+                            backgroundColor={"#DF3D3D"}
+                            mode={"left"}
+                            images={[LDBWeb]}
+                            primaryHeading={"WEBSITE"}
+                            secondaryHeading={"Lady Bird Hub"}
+                            mainText={"Revolutionizing blogging"}
+                        />
+                    </Slide>
+                )}
+                {portfolioMode === "website" && (
+                    <Slide id="website">
+                        <PortfolioGrid
+                            backgroundColor={"#DF3D3D"}
+                            mode={"right"}
+                            images={[Afro]}
+                            primaryHeading={"WEBSITE"}
+                            secondaryHeading={"AFRO"}
+                            mainText={"A Musician Website"}
+                        />
+                    </Slide>
+                )}
+                {portfolioMode === "website" && (
+                    <Slide>
+                        <PortfolioGrid
+                            backgroundColor={"#DF3D3D"}
+                            mode={"left"}
+                            images={[Scarbo]}
+                            primaryHeading={"WEBSITE"}
+                            secondaryHeading={"Scarbo"}
+                            mainText={"A Music Website"}
                         />
                     </Slide>
                 )}

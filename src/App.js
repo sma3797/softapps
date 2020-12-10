@@ -1,27 +1,18 @@
-import React, { useEffect } from "react";
 import Layout from "./Main/Layout/Layout";
+import LayoutMobTab from "./Main/Layout/Layout2";
 import classes from "./App.module.css";
 import { isMobile, isTablet } from "react-device-detect";
 import { useSlide } from "./shared/hooks/slide-hook";
 import { SlideContext } from "./shared/context/slide-context";
+import React, { useEffect } from "react";
 
 function App() {
-    const { exploreState, setExploreStateHandler, setSlideNumberHandler, slideNumber } = useSlide();
-
-    useEffect(() => {
-        localStorage.setItem("slideNumber", 0);
-        localStorage.setItem("exploreState", undefined);
-    }, []);
-
     let content;
-    content = (
-        <SlideContext.Provider value={{ exploreState, setExploreStateHandler, setSlideNumberHandler, slideNumber }}>
-            <Layout />
-        </SlideContext.Provider>
-    );
-    // if (isMobile || isTablet) {
-    //     content = <p>Mobile</p>;
-    // }
+    content = <Layout />;
+
+    if (isMobile || isTablet) {
+        content = <LayoutMobTab />;
+    }
     return <div className={classes.App}>{content}</div>;
 }
 
