@@ -78,6 +78,11 @@ const Career = (props) => {
         formData.append("experience", experience);
         formData.append("letter", letter);
         formData.append("cv", file);
+
+        for (var value of formData.entries()) {
+            console.log("value", value);
+        }
+
         try {
             const responseData = await sendRequest(
                 `${process.env.REACT_APP_BACKEND_URL}/job`,
